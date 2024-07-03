@@ -1,4 +1,3 @@
-/*Обнуление*/
 * {
     padding: 0;
     margin: 0;
@@ -87,8 +86,6 @@ h6 {
     font-size: inherit;
     font-weight: 400;
 }
-
-/*--------------------*/
 
 body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
