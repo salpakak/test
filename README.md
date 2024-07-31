@@ -1,4 +1,4 @@
-module.exports = function toReadable (number) {
+"module.exports = function toReadable (number) {
     let result = '';
     const numberWords = [
         "zero", "one", "two", "three", "four", "five", 
@@ -33,3 +33,4 @@ module.exports = function toReadable (number) {
         return result;
     }
 }
+"
