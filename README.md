@@ -1,3 +1,28 @@
+function decode(expr) {
+    let result = "";
+    let segments = expr.match(/.{10}/g);
+    for (let segment of segments) {
+        if (segment === '**********') {
+            outPut += ' ';
+        } else {
+            let morse = '';         
+            for (let i = 0; i < segment.length; i += 2) {
+                let pair = segment.slice(i, i + 2);
+                if (pair === '10') {
+                    morse += '.';
+                } else if (pair === '11') {
+                    morse += '-';
+                }
+            }  
+            result += MORSE_TABLE[morse];
+        }
+    }
+
+    return result;
+}
+
+
+
 module.exports = function reverse (n) {
     n = Math.abs(n);
     let str = n.toString();
