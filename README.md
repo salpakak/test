@@ -1,3 +1,23 @@
+module.exports = function towelSort (matrix) {
+  let result = [];
+  if (!Array.isArray(matrix) || matrix.length === 0) {
+    return [];
+  }
+  matrix.forEach((element, index) => {
+    if (Array.isArray(element)) {
+      if (index % 2 === 0) {
+        result = result.concat(element);
+      } else {
+        result = result.concat(element.reverse());
+      }
+    } else {
+      result.push(element);
+    }
+  });
+  return result;
+}
+
+
 function decode(expr) {
     let result = "";
     let segments = expr.match(/.{10}/g);
